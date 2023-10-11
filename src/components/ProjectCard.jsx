@@ -7,8 +7,8 @@ const ProjectCard = ({ project }) => {
                 {/*const ok = project.desc.map((bullet) => <li>{bullet}</li>);*/}
                 <div className="image">
                     <img
-                        src={"src/assets/" + project.img}
-                        alt="image error"
+                        src={"/" + project.img}
+                        alt={project.title}
                         srcset=""
                     />
                 </div>
