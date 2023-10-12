@@ -5,9 +5,12 @@
 #root {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
+    height: 100vh;
     text-align: left;
+    position: relative;
 }
 
 @font-face {
@@ -221,7 +224,8 @@ p {
     height: auto;
     inset: 40px;
     margin: auto;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .modal-close {

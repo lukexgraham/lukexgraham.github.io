@@ -10,7 +10,7 @@ function App() {
     const [open, setOpen] = useState(false);
     const [project, setProject] = useState(null);
     const handleOpen = (project) => {
-        document.body.style.overflow = "hidden";
+        document.getElementById("root").style.overflowY = "hidden";
         setOpen(true);
         setProject(project);
     };
@@ -26,7 +26,8 @@ function App() {
                 <Modal
                     handleClose={() => {
                         setOpen(false);
-                        document.body.style.overflow = "auto";
+                        document.getElementById("root").style.overflowY =
+                            "auto";
                     }}
                     show={true}
                     project={project}
