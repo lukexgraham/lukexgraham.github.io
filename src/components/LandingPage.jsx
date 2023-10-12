@@ -10,8 +10,10 @@ const LandingPage = () => {
                         Edinburgh.
                     </h1>
                     <p>
-                        A Graduate from University of Strathclyde ready to learn
-                        and grow
+                        I am a highly motivated individual seeking the
+                        opportunity to start a full-time career where I can
+                        build upon the skills that I gained and developed
+                        throughout my time at university.
                     </p>
                     <a
                         className="email-link"
