@@ -16,7 +16,6 @@ const ProjectCard = ({ project, toggleModal }) => {
                 className="project"
                 onClick={() => {
                     toggleModal(project);
-                    document.body.style.overflow = "hidden";
                 }}
             >
                 <div className="image">
