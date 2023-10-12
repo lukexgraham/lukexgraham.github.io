@@ -43,17 +43,26 @@ const projects = [
     },
 ];
 
-const FeaturedWork = () => {
+const FeaturedWork = ({ toggleModal }) => {
     return (
         <div id="featured-work">
             <div className="container">
                 <h2 className="section-title">Featured Work.</h2>
                 <div className="card-row">
-                    <ProjectCard project={projects[0]} />
-                    <ProjectCard project={projects[1]} />
+                    <ProjectCard
+                        project={projects[0]}
+                        toggleModal={toggleModal}
+                    />
+                    <ProjectCard
+                        project={projects[1]}
+                        toggleModal={toggleModal}
+                    />
                 </div>
                 <div className="card-row">
-                    <ProjectCard project={projects[2]} />
+                    <ProjectCard
+                        project={projects[2]}
+                        toggleModal={toggleModal}
+                    />
                 </div>
             </div>
         </div>
