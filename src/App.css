@@ -28,6 +28,12 @@
     font-weight: 900;
 }
 
+@font-face {
+    font-family: CircularItalic;
+    src: url(./fonts/Circular/CircularStd-BookItalic.otf);
+    font-weight: 300;
+}
+
 body {
     font-family: Circular, sans-serif;
     background-color: white;
@@ -46,13 +52,14 @@ p {
 .section-title {
     font-size: 22pt;
     font-weight: 900;
+    margin: 10px 0;
 }
 
 .container {
     max-width: 1140px;
     margin: auto;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 20px;
     box-sizing: border-box;
     height: auto;
 }
@@ -78,12 +85,13 @@ p {
 .card-row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
+    margin: 0 -10px;
 }
 
 .card-container {
-    padding: 20px;
+    padding: 0 10px;
     width: 100%;
+    margin-top: 20px;
 }
 
 .project {
@@ -147,15 +155,9 @@ p {
 
 .project-subheading {
     margin: 0;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 12pt;
-}
-
-@media (min-width: 990px) {
-    .card-container {
-        max-width: 50%;
-        flex: 0 0 50%;
-    }
+    font-family: CircularItalic, Circular;
 }
 
 .navbar {
@@ -219,7 +221,7 @@ p {
     height: auto;
     inset: 40px;
     margin: auto;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .modal-close {
@@ -229,11 +231,13 @@ p {
     z-index: 999;
     padding: 20px;
     background-color: #eee;
+    color: #212529;
 }
 
 .modal-close:hover {
     text-decoration: none;
     border: none;
+    color: #212529;
 }
 
 .modal-close svg {
@@ -270,7 +274,7 @@ p {
 }
 
 .modal-bottom {
-    padding: 25px 50px;
+    padding: 25px 30px;
 }
 
 .modal-bottom ul {
@@ -279,6 +283,7 @@ p {
 
 .modal-bottom li {
     font-size: 14px;
+    padding-bottom: 1em;
 }
 
 .content-box {
@@ -309,4 +314,18 @@ p {
 
 .display-none {
     display: none;
+}
+
+@media (min-width: 960px) {
+    .card-container {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    .modal-bottom {
+        padding: 25px 50px;
+    }
+
+    .modal-bottom li {
+        padding: 0;
+    }
 }

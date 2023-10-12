@@ -26,7 +26,7 @@ const projects = [
             "Built an intuitive UI-based desktop app using JavaFX to interface the backend in a decoupled architecture style",
             "Automated unit testing of the app using JUnit",
         ],
-        img: "",
+        img: "project-boston.png",
     },
     {
         title: "Wellbeing Mobile Web App",
