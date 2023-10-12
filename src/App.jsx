@@ -10,7 +10,9 @@ function App() {
     const [open, setOpen] = useState(false);
     const [project, setProject] = useState(null);
     const handleOpen = (project) => {
-        document.getElementById("root").style.overflowY = "hidden";
+        const scrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
         setOpen(true);
         setProject(project);
     };
@@ -26,8 +28,10 @@ function App() {
                 <Modal
                     handleClose={() => {
                         setOpen(false);
-                        document.getElementById("root").style.overflowY =
-                            "auto";
+                        const scrollY = document.body.style.top;
+                        document.body.style.position = "relative";
+                        document.body.style.top = "0";
+                        window.scrollTo(0, parseInt(scrollY || "0") * -1);
                     }}
                     show={true}
                     project={project}
