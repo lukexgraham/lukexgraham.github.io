@@ -10,6 +10,7 @@ function App() {
     const [open, setOpen] = useState(false);
     const [project, setProject] = useState(null);
     const handleOpen = (project) => {
+        document.body.style.overflow = "hidden";
         setOpen(true);
         setProject(project);
     };
