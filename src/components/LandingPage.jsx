@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const LandingPage = () => {
     return (
@@ -6,8 +7,24 @@ const LandingPage = () => {
             <div className="container">
                 <div className="content-box">
                     <h1 className="landing-title">
-                        Hey, I'm Lucas - A Graduate Software Engineer from
-                        Edinburgh.
+                        Hey, I'm Lucas - A&nbsp;
+                        <span>
+                            <TypeAnimation
+                                preRenderFirstString={true}
+                                sequence={[
+                                    1000,
+                                    "Software Developer",
+                                    3000,
+                                    "Problem Solver",
+                                    3000,
+                                    "Team Player",
+                                    3000,
+                                ]}
+                                repeat={Infinity}
+                            />
+                        </span>
+                        <br />
+                        From Edinburgh
                     </h1>
                     <p>
                         I am a highly motivated individual seeking the

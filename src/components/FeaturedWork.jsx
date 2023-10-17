@@ -13,7 +13,7 @@ const projects = [
             "Developed and fine-tuned a CNN object detector to accurately identify vehicles in real-time",
             "Worked towards defined deadlines to give progress reports and final project presentation",
         ],
-        img: "project-quarry.png",
+        img: "project-quarry.jpg",
     },
     {
         title: "Boston Railway Pathfinder",
