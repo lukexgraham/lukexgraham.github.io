@@ -7,7 +7,7 @@ const getAssetSrc = (name) => {
     }
     const path = `/src/assets/images/${name}`;
     const modules = import.meta.glob("/src/assets/images/*", { eager: true });
-    return modules[path].default;
+        return modules[path].default;
 };
 
 const Modal = ({ handleClose, show, project }) => {

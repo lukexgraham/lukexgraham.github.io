@@ -24,12 +24,12 @@ const LandingPage = () => {
                             />
                         </span>
                         <br />
-                        From Edinburgh
+                        From Edinburgh.
                     </h1>
                     <p>
                         I am a highly motivated individual seeking the
                         opportunity to start a full-time career where I can
-                        build upon the skills that I gained and developed
+                        build upon the skills that I've gained and developed
                         throughout my time at university.
                     </p>
                     <a
