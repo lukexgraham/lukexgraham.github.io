@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
 import FeaturedWork from "./components/FeaturedWork";
 import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 
 function App() {
     const [open, setOpen] = useState(false);
@@ -24,6 +25,7 @@ function App() {
                 <LandingPage />
                 <FeaturedWork toggleModal={handleOpen} />
             </main>
+            <Footer />
             {open ? (
                 <Modal
                     handleClose={() => {
