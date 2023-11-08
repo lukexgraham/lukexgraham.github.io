@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
     return (
         <footer>
-            <div class="container">
+            <div className="container">
                 <div className="footer-social">
                     <IconContext.Provider value={{ size: 36 }}>
                         <a href="https://github.com/lukexgraham">

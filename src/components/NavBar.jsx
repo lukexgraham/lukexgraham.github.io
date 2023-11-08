@@ -1,9 +1,12 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ toggleCV }) => {
     return (
         <div id="navigation">
             <nav className="navbar container">
+                <span className="nav-link" onClick={toggleCV}>
+                    CV
+                </span>
                 <a className="nav-link" href="https://github.com/lukexgraham">
                     github
                 </a>

@@ -7,17 +7,20 @@ const getAssetSrc = (name) => {
     }
     const path = `/src/assets/images/${name}`;
     const modules = import.meta.glob("/src/assets/images/*", { eager: true });
-        return modules[path].default;
+    return modules[path].default;
 };
 
 const Modal = ({ handleClose, show, project }) => {
     const showHideClassName = show ? "display-block" : "display-none";
     return (
         <div id="modal" className={showHideClassName}>
+            <div className="cover" onClick={handleClose} />
             <div className="modal-main">
-                <button className="modal-close" onClick={handleClose}>
-                    <AiOutlineClose />
-                </button>
+                <div className="popup-buttons">
+                    <span className="popup-button" onClick={handleClose}>
+                        <AiOutlineClose size={"24px"} />
+                    </span>
+                </div>
                 <div className="modal-top">
                     <div className="modal-image">
                         <img
