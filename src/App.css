@@ -180,6 +180,7 @@ p {
     color: var(--dark-colour);
     transition: 0.2s ease-out;
     -webkit-transition: 0.2s ease-out;
+    cursor: pointer;
 }
 
 .nav-link:hover {
@@ -211,11 +212,82 @@ p {
     width: 100%;
 }
 
+#CV {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    inset: 0px;
+}
+
+.cover {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.CV-main {
+    position: fixed;
+    background: var(--light-colour);
+    max-width: 960px;
+    max-height: 90%;
+    height: auto;
+    inset: 40px;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.loading {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.popup-buttons {
+    justify-content: right;
+    display: flex;
+    flex-direction: row-reverse;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 9999;
+}
+
+.popup-button {
+    padding: 12px;
+    margin: 12px 12px 0 0;
+    cursor: pointer;
+    color: #777;
+}
+
+.popup-button:hover {
+    color: var(--dark-colour);
+}
+
+.popup-button a {
+    color: inherit;
+}
+.popup-button a:hover {
+    color: inherit;
+}
+
+.popup-button svg {
+    display: block;
+}
+
+.popup-button:hover svg {
+    stroke-width: 50px;
+}
+
 #modal {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
     z-index: 900;
     inset: 0px;
 }
@@ -230,26 +302,6 @@ p {
     margin: auto;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 999;
-    padding: 20px;
-    background-color: var(--light-colour);
-    color: var(--dark-colour);
-}
-
-.modal-close:hover {
-    text-decoration: none;
-    border: none;
-    color: var(--dark-colour);
-}
-
-.modal-close svg {
-    stroke-width: 100px;
 }
 
 .modal-top {
@@ -297,15 +349,6 @@ p {
 .content-box {
     max-width: 700px;
 }
-
-.cover {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-}
-
 .landing-title {
     font-size: 26pt;
     font-weight: 900;

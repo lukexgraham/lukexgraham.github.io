@@ -6,30 +6,38 @@ import LandingPage from "./components/LandingPage";
 import FeaturedWork from "./components/FeaturedWork";
 import Modal from "./components/Modal";
 import Footer from "./components/Footer";
+import CV from "./components/CV";
 
 function App() {
-    const [open, setOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [CVOpen, setCVOpen] = useState(false);
     const [project, setProject] = useState(null);
-    const handleOpen = (project) => {
+    const handleModalOpen = (project) => {
         const scrollY = window.scrollY;
         document.body.style.position = "fixed";
         document.body.style.top = `-${scrollY}px`;
-        setOpen(true);
+        setModalOpen(true);
         setProject(project);
+    };
+    const handleCVOpen = () => {
+        const scrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
+        setCVOpen(true);
     };
 
     return (
         <>
-            <NavBar />
+            <NavBar toggleCV={handleCVOpen} />
             <main>
                 <LandingPage />
-                <FeaturedWork toggleModal={handleOpen} />
+                <FeaturedWork toggleModal={handleModalOpen} />
             </main>
             <Footer />
-            {open ? (
+            {modalOpen ? (
                 <Modal
                     handleClose={() => {
-                        setOpen(false);
+                        setModalOpen(false);
                         const scrollY = document.body.style.top;
                         document.body.style.position = "relative";
                         document.body.style.top = "0";
@@ -37,6 +45,19 @@ function App() {
                     }}
                     show={true}
                     project={project}
+                />
+            ) : null}
+
+            {CVOpen ? (
+                <CV
+                    handleClose={() => {
+                        setCVOpen(false);
+                        const scrollY = document.body.style.top;
+                        document.body.style.position = "relative";
+                        document.body.style.top = "0";
+                        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+                    }}
+                    show={true}
                 />
             ) : null}
         </>
