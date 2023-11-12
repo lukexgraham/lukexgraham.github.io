@@ -47,7 +47,9 @@ const FeaturedWork = ({ toggleModal }) => {
     return (
         <div id="featured-work">
             <div className="container">
-                <h2 className="section-title">Featured Work.</h2>
+                <h2 className="section-title">
+                    Featured Work<span style={{ color: "#42776a" }}>.</span>
+                </h2>
                 <div className="card-row">
                     <ProjectCard
                         project={projects[0]}
