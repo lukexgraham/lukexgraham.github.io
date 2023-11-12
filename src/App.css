@@ -3,8 +3,8 @@
 }
 
 :root {
-    --dark-colour: #212529;
-    --light-colour: #ffffff;
+    --dark-colour: #262626;
+    --light-colour: #fafaf9;
 }
 
 #root {
@@ -40,10 +40,16 @@
     font-weight: 300;
 }
 
+@font-face {
+    font-family: CoolveticaItalic;
+    src: url(./fonts/Coolvetica/CoolveticaItalic.otf);
+    font-weight: 500;
+}
+
 body {
     font-family: Circular, sans-serif;
     background-color: var(--light-colour);
-    font-size: 14pt;
+    font-size: 18px;
     color: var(--dark-colour);
     width: 100%;
 }
@@ -72,14 +78,46 @@ p {
 }
 
 #navigation {
-    position: fixed;
+    position: absolute;
     background-color: var(--light-colour);
     left: 0;
     right: 0;
     top: 0;
     box-sizing: border-box;
-    border-bottom: 1px solid var(--dark-colour);
+    /* border-bottom: 1px solid var(--dark-colour); */
     z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 8px 18px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 8px 12px;
+    font-weight: 900;
+    color: var(--dark-colour);
+    transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: var(--light-colour);
+    background-color: #42776a;
+}
+
+.title {
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 32px;
+    font-family: CoolveticaItalic;
+    color: #42776a;
+    display: none;
 }
 
 #featured-work {
@@ -149,7 +187,7 @@ p {
 
 .image-overlay-text {
     padding: 40px 0 0 40px;
-    color: #ffffff;
+    color: var(--light-colour);
     max-width: 60%;
 }
 
@@ -165,27 +203,6 @@ p {
     font-weight: 300;
     font-size: 12pt;
     font-family: CircularItalic, Circular;
-}
-
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    padding: 0.5rem 1rem;
-}
-
-.nav-link {
-    padding: 0.5em 1em;
-    font-weight: 900;
-    color: var(--dark-colour);
-    transition: 0.2s ease-out;
-    -webkit-transition: 0.2s ease-out;
-    cursor: pointer;
-}
-
-.nav-link:hover {
-    color: var(--light-colour);
-    background-color: var(--dark-colour);
 }
 
 .email-link {
@@ -390,6 +407,10 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer-social svg:hover {
+    stroke-width: 25px;
+}
+
 .footer-social a,
 .footer-social a:hover {
     color: inherit;
@@ -407,5 +428,11 @@ footer {
 
     .modal-bottom li {
         padding: 0;
+    }
+}
+
+@media (min-width: 480px) {
+    .title {
+        display: block;
     }
 }

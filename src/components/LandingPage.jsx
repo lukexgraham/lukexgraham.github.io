@@ -7,7 +7,8 @@ const LandingPage = () => {
             <div className="container">
                 <div className="content-box">
                     <h1 className="landing-title">
-                        Hey, I'm Lucas - A&nbsp;
+                        Hey, I'm <span style={{ color: "#42776a" }}>Lucas</span>{" "}
+                        - A&nbsp;
                         <span>
                             <TypeAnimation
                                 preRenderFirstString={true}
@@ -24,7 +25,8 @@ const LandingPage = () => {
                             />
                         </span>
                         <br />
-                        From Edinburgh.
+                        From Edinburgh
+                        <span style={{ color: "#42776a" }}>.</span>
                     </h1>
                     <p>
                         I am a highly motivated individual seeking the

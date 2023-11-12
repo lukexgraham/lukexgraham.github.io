@@ -4,6 +4,7 @@ const NavBar = ({ toggleCV }) => {
     return (
         <div id="navigation">
             <nav className="navbar container">
+                <span className="title">lucasgraham</span>
                 <span className="nav-link" onClick={toggleCV}>
                     CV
                 </span>
