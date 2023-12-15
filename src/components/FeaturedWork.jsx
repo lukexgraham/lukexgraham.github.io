@@ -40,6 +40,22 @@ const projects = [
             "Utilised Git for version control and collaboration during development, allowing streamlined implementation of individual members’ contributions",
         ],
         img: "project-wellbeing.png",
+        noBoxShadow: true,
+    },
+    {
+        title: "Watt? A Social Fitness Web App",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdinQY2U9pKk6jqlWd8HR7EwCeKx5aOlR8VUxiLKWgkyqQ5oGlB_ftkGXntNkJpuA0lG8&usqp=CAU",
+        tools: "React, Node.js, Postgresql",
+        github: "https://github.com/lukexgraham/watt",
+        website: "https://lukegraham.co.uk",
+        date: "October 2023 – November 2023",
+        desc: [
+            "Designed and developed a fullstack webapp for users to post and share running and cycling activities",
+            "Developed a dynamic SPA frontend in React with a focus on responsiveness and user experience",
+            "Implemented a robust backend using Express and Node.js, incorporating RESTful APIs to facilitate seamless interaction with the frontend, DB and external APIs",
+            "Integrated a PostgreSQL database to store and manage user and application data",
+        ],
+        img: "project-watt.png",
     },
 ];
 
@@ -51,20 +67,12 @@ const FeaturedWork = ({ toggleModal }) => {
                     Featured Work<span style={{ color: "#42776a" }}>.</span>
                 </h2>
                 <div className="card-row">
-                    <ProjectCard
-                        project={projects[0]}
-                        toggleModal={toggleModal}
-                    />
-                    <ProjectCard
-                        project={projects[1]}
-                        toggleModal={toggleModal}
-                    />
+                    <ProjectCard project={projects[0]} toggleModal={toggleModal} />
+                    <ProjectCard project={projects[1]} toggleModal={toggleModal} />
                 </div>
                 <div className="card-row">
-                    <ProjectCard
-                        project={projects[2]}
-                        toggleModal={toggleModal}
-                    />
+                    <ProjectCard project={projects[2]} toggleModal={toggleModal} />
+                    <ProjectCard project={projects[3]} toggleModal={toggleModal} />
                 </div>
             </div>
         </div>

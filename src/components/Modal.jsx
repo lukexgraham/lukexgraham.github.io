@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 
 const getAssetSrc = (name) => {
     if (!name) {
@@ -23,15 +24,20 @@ const Modal = ({ handleClose, show, project }) => {
                 </div>
                 <div className="modal-top">
                     <div className="modal-image">
-                        <img
-                            src={getAssetSrc(project.img)}
-                            alt={project.title}
-                        />
+                        <img src={getAssetSrc(project.img)} alt={project.title} />
                     </div>
                 </div>
                 <div className="modal-bottom">
                     <p className="project-title">{project.title}</p>
+                    {project.github ? (
+                        <p className="project-github">
+                            <a href={project.github}>
+                                <AiFillGithub size={30} />
+                            </a>
+                        </p>
+                    ) : null}
                     <p className="project-subheading">{project.tools}</p>
+                    {project.website ? <a href={project.website}>lukexxgraham.co.uk</a> : null}
                     <ul>
                         {project.desc.map((desc) => (
                             <li>{desc}</li>
