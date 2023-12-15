@@ -23,6 +23,7 @@ const ProjectCard = ({ project, toggleModal }) => {
                         src={getAssetSrc(project.img)}
                         alt={project.title}
                         srcSet=""
+                        style={project.noBoxShadow ? { boxShadow: "none" } : null}
                     />
                 </div>
                 <div className="image-overlay">
