@@ -4,7 +4,6 @@ import ProjectCard from "./ProjectCard";
 const projects = [
     {
         title: "Deep Learning Honours Project",
-        src: "https://www.techdonut.co.uk/sites/default/files/styles/landing_pages_lists/public/what-is-screen-resolution_1042807015.jpg?itok=WCoZxuoC",
         tools: "Python, PyTorch, Docker",
         date: "September 2022 - March 2023",
         desc: [
@@ -14,10 +13,10 @@ const projects = [
             "Worked towards defined deadlines to give progress reports and final project presentation",
         ],
         img: "project-quarry.jpg",
+        secondaryImages: [],
     },
     {
         title: "Boston Railway Pathfinder",
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdinQY2U9pKk6jqlWd8HR7EwCeKx5aOlR8VUxiLKWgkyqQ5oGlB_ftkGXntNkJpuA0lG8&usqp=CAU",
         tools: "Java, JavaFX",
         date: "February 2022 - April 2022",
         desc: [
@@ -27,10 +26,10 @@ const projects = [
             "Automated unit testing of the app using JUnit",
         ],
         img: "project-boston.png",
+        secondaryImages: [],
     },
     {
         title: "Wellbeing Mobile Web App",
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdinQY2U9pKk6jqlWd8HR7EwCeKx5aOlR8VUxiLKWgkyqQ5oGlB_ftkGXntNkJpuA0lG8&usqp=CAU",
         tools: "HTML/ CSS, Javascript, PHP, MySQL",
         date: "February 2022 – March 2022",
         desc: [
@@ -40,11 +39,11 @@ const projects = [
             "Utilised Git for version control and collaboration during development, allowing streamlined implementation of individual members’ contributions",
         ],
         img: "project-wellbeing.png",
+        secondaryImages: [],
         noBoxShadow: true,
     },
     {
         title: "Watt? A Social Fitness Web App",
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdinQY2U9pKk6jqlWd8HR7EwCeKx5aOlR8VUxiLKWgkyqQ5oGlB_ftkGXntNkJpuA0lG8&usqp=CAU",
         tools: "React, Node.js, Postgresql",
         github: "https://github.com/lukexgraham/watt",
         website: "https://lukegraham.co.uk",
@@ -56,6 +55,7 @@ const projects = [
             "Integrated a PostgreSQL database to store and manage user and application data",
         ],
         img: "project-watt.png",
+        secondaryImages: ["watt-activity.png", "watt-phone.png"],
     },
 ];
 
